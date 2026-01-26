@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-servers',
   //selector: '[app-servers]',
   // selector: '.app-servers',
@@ -15,7 +16,7 @@ export class ServersComponent implements OnInit {
   serverCreated = false;
   servers = ['TestServer', 'TestServer 2'];
 
-  constructor() { 
+  constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000);
